@@ -1,0 +1,7 @@
+interface:
+  display_name: "Creator Lead Automation"
+  short_description: "自动获客闭环：留资、评分、分流、培育与复盘"
+  brand_color: "#0F766E"
+  default_prompt: "Use $creator-lead to build and validate an automated, consent-based customer-acquisition funnel."
+policy:
+  allow_implicit_invocation: true

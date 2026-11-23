@@ -1,0 +1,20 @@
+[
+  {
+    "display_name": "【示例】用户示例",
+    "platform": "douyin",
+    "source_type": "comment",
+    "source_code": "ai-career-starter-douyin-short-001",
+    "raw_text": "【示例】这个陪跑具体怎么收费？",
+    "primary_goal": "转岗或求职",
+    "is_sample": true
+  },
+  {
+    "display_name": "【示例】用户示例二",
+    "platform": "x",
+    "source_type": "comment",
+    "source_code": "ai-career-starter-x-thread-002",
+    "raw_text": "【示例】想先看看入门清单",
+    "primary_goal": "提高工作效率",
+    "is_sample": true
+  }
+]
