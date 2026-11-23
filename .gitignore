@@ -1,0 +1,28 @@
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+
+# 依赖（本仓库是文档与提示词，默认不需要）
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 环境变量与密钥，永远不要提交
+.env
+.env.local
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets/
+
+# 可能含真实评论、私信或个人信息的本地导出，不要提交
+local-exports/
+leads-private/
+*.private.json
