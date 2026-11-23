@@ -1,0 +1,116 @@
+{
+  "generated_at": "2026-11-23T10:00:00+08:00",
+  "timezone": "Asia/Shanghai",
+  "schema_version": "1.0",
+  "source": "local-sample",
+  "note": "【示例】以下内容与选题均为虚构演示，不是真实新闻，也不是已经发布的稿件。不得当作真实事件、真实成绩或可直接发布的文案。",
+  "items": [
+    {
+      "id": "sample-content-20261123-01",
+      "is_sample": true,
+      "status": "draft",
+      "platform": "douyin",
+      "topic": {
+        "id": "sample-20261122-01",
+        "title": "【示例】某办公软件宣布测试「草稿代写」功能",
+        "link": "https://example.com/sample-ai-news/office-draft-assistant",
+        "source": "local-sample",
+        "published": "2026-11-22 09:30",
+        "published_iso": "2026-11-22T09:30:00+08:00",
+        "summary": "【示例】一条虚构的产品更新说明：某办公软件开始向部分用户测试文档草稿代写。此处没有真实公司、真实功能和真实发布时间，只用来演示选题字段。",
+        "is_sample": true,
+        "scores": {
+          "hook": 8.0,
+          "anxiety": 7.5,
+          "relevance": 8.5
+        },
+        "score_reasons": {
+          "hook": "【示例】与日常写文档的场景接近，容易引起注意。",
+          "anxiety": "【示例】可能让职场人担心自己的文字工作被部分替代。",
+          "relevance": "【示例】目标用户经常使用办公软件。"
+        },
+        "hook_titles": [
+          "【示例】你每天打开的文档工具，开始替你写草稿了",
+          "【示例】代写草稿不是丢工作，先看它到底能改哪一步"
+        ]
+      },
+      "title_options": [
+        "【示例】办公软件开始替你写草稿？先别慌",
+        "【示例】文档工具会写初稿了，普通岗位先看这三点"
+      ],
+      "cover_copy": "先别慌",
+      "body": "【示例口播，勿发布】你每天打开的文档工具，开始能写草稿了。先说清楚：这是演示稿，不是某家公司今天的真实公告。假如你工作里经常先写初稿，再改结构、补事实，这个变化会碰到你的第一段，而不是最后的判断。接下来 40 秒只记住三件事：它能写的是草稿，不是替你核对来源；你要会改结构和查事实，才不容易被带偏；入门清单里有一份「人改 AI 草稿」的检查步骤。想要清单的，评论区扣“清单”，领取方式我写在置顶。",
+      "cta": "评论区扣“清单”，领取方式见置顶",
+      "redeem_path": "【示例】置顶评论说明：关注后前往公众号回复“清单”领取。该路径需用户真实配置后才能使用。",
+      "estimated_duration": "约 50 秒",
+      "word_count": 196,
+      "overall_score": 8.0,
+      "notes": "综合分按 hook*0.4 + anxiety*0.3 + relevance*0.3 计算。发布前必须替换为真实新闻和可兑现的领取路径。"
+    },
+    {
+      "id": "sample-content-20261123-02",
+      "is_sample": true,
+      "status": "draft",
+      "platform": "x",
+      "topic": {
+        "id": "sample-20261122-01",
+        "title": "【示例】某办公软件宣布测试「草稿代写」功能",
+        "link": "https://example.com/sample-ai-news/office-draft-assistant",
+        "source": "local-sample",
+        "published": "2026-11-22 09:30",
+        "published_iso": "2026-11-22T09:30:00+08:00",
+        "summary": "【示例】虚构产品更新，仅用于演示 X 串帖结构。",
+        "is_sample": true,
+        "scores": {
+          "hook": 8.0,
+          "anxiety": 7.5,
+          "relevance": 8.5
+        }
+      },
+      "title_options": [
+        "【示例】办公软件测试草稿代写，和「被替代」不是同一件事"
+      ],
+      "cover_copy": "",
+      "body": "【示例串帖，勿发布】\n1/4 假设某办公软件开始测试「草稿代写」。这不是真实快讯，只演示怎么写串帖：先写可核对的事实，再写对使用者的影响。\n2/4 对经常写周报、方案初稿的人，变化通常发生在「空白页到第一稿」，而不是最终拍板。出处和限制条件要放在这一条。示例链接：https://example.com/sample-ai-news/office-draft-assistant\n3/4 更有用的问题不是「会不会丢工作」，而是：谁来核对事实、谁来改结构和谁来负责任。把这些步骤写进自己的检查清单，比转发焦虑更管用。\n4/4 我做了一份【示例】入门清单，领取方式写在置顶帖和主页简介。有具体使用场景的问题，可以直接回复，我会人工看。",
+      "cta": "领取方式见置顶帖和主页简介",
+      "redeem_path": "【示例】置顶帖说明资料名称，并指向用户自己的资料页或公众号。",
+      "estimated_duration": "约 1 分钟阅读",
+      "word_count": 260,
+      "overall_score": 8.0,
+      "notes": "发布真实内容时必须替换出处链接，并核对照制条件。"
+    },
+    {
+      "id": "sample-content-20261123-03",
+      "is_sample": true,
+      "status": "draft",
+      "platform": "wechat-mp",
+      "topic": {
+        "id": "sample-20261122-01",
+        "title": "【示例】某办公软件宣布测试「草稿代写」功能",
+        "link": "https://example.com/sample-ai-news/office-draft-assistant",
+        "source": "local-sample",
+        "published": "2026-11-22 09:30",
+        "published_iso": "2026-11-22T09:30:00+08:00",
+        "summary": "【示例】虚构产品更新，仅用于演示公众号大纲。",
+        "is_sample": true,
+        "scores": {
+          "hook": 8.0,
+          "anxiety": 7.5,
+          "relevance": 8.5
+        }
+      },
+      "title_options": [
+        "【示例】办公软件会写草稿了：先分清它能做的和你该做的",
+        "【示例】面对「草稿代写」，职场人只需要先改三个习惯"
+      ],
+      "cover_copy": "",
+      "body": "【示例大纲，勿群发】\n标题：办公软件会写草稿了：先分清它能做的和你该做的\n开头：用一句话交代「这是功能演示稿中的虚构更新」，再说明本文只讨论草稿阶段的分工，不做裁员预测。\n第一节：发生了什么（只写已有出处的信息，示例中应替换为真实公告要点和链接）。\n第二节：它通常碰到工作流的哪一步（空白页到初稿）。\n第三节：使用者仍要自己完成的三件事——核对事实、调整结构、承担对外责任。\n第四节：一份检查清单的目录（对应免费资料，不在正文里夸大效果）。\n结尾：关注后回复“清单”领取；说明资料做不到什么；如需付费陪跑，用一句实话介绍，不制造名额紧张。",
+      "cta": "关注后回复“清单”领取入门清单",
+      "redeem_path": "【示例】在公众号后台配置关键词「清单」的回复文案，并由用户人工启用。",
+      "estimated_duration": "全文约 8–10 分钟阅读（扩写后）",
+      "word_count": 220,
+      "overall_score": 8.0,
+      "notes": "大纲不是全文。扩写时不得添加示例里没有的产品细节。"
+    }
+  ]
+}
