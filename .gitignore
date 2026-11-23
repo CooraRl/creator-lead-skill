@@ -1,37 +1,13 @@
-# 系统与编辑器
-.DS_Store
-Thumbs.db
-.idea/
-.vscode/
+.creator-lead-data/
+*.sqlite
+*.sqlite3
+*.db
+*.csv
+*.jsonl
 *.log
-
-# 依赖（本仓库是文档与提示词，默认不需要）
-node_modules/
+.env
 __pycache__/
 *.pyc
+campaign.json
 .venv/
 venv/
-
-# 环境变量与密钥，永远不要提交
-.env
-.env.local
-.env.*
-!.env.example
-*.pem
-*.key
-credentials.json
-secrets/
-
-# 可能含真实评论、私信或个人信息的本地导出，不要提交
-local-exports/
-leads-private/
-*.private.json
-
-# 获客引擎运行时数据，永远不要提交
-skills/creator-lead/data/
-skills/creator-lead/.env
-skills/creator-lead/local-exports/
-*.sqlite3
-*.sqlite3-shm
-*.sqlite3-wal
-landing.html
