@@ -1,0 +1,53 @@
+# 在仓库根目录（与 scripts/、assets/ 同级）使用：
+#   cp assets/env.example .env
+#   docker compose -f assets/docker-compose.example.yml up --build
+# 主机端口只绑 127.0.0.1。worker 默认 dry-run，确认 SMTP/webhook 后再把 command 加上 --send。
+
+services:
+  lead-web:
+    build:
+      context: ..
+      dockerfile: assets/Dockerfile
+    command:
+      - serve
+      - --config
+      - /config/campaign.json
+      - --data-dir
+      - /data
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8787"
+    env_file:
+      - ../.env
+    ports:
+      - "127.0.0.1:8787:8787"
+    volumes:
+      - ../campaign.json:/config/campaign.json:ro
+      - ../.creator-lead-data:/data
+    restart: unless-stopped
+
+  lead-worker:
+    build:
+      context: ..
+      dockerfile: assets/Dockerfile
+    # 必须覆盖 entrypoint：原文件若写成 command: sh -c ... 会被拼到脚本后面而失败。
+    entrypoint: ["python", "/app/scripts/creator_lead.py"]
+    command:
+      - worker
+      - --config
+      - /config/campaign.json
+      - --data-dir
+      - /data
+    env_file:
+      - ../.env
+    volumes:
+      - ../campaign.json:/config/campaign.json:ro
+      - ../.creator-lead-data:/data
+    depends_on:
+      lead-web:
+        condition: service_healthy
+    restart: unless-stopped
+    # 定时真正外发（确认后把 command 最后一项改为含 --send 的循环，并覆盖 entrypoint 为 sh）：
+    # entrypoint: ["sh", "-c"]
+    # command: ["while true; do python /app/scripts/creator_lead.py worker --config /config/campaign.json --data-dir /data --send; sleep 300; done"]

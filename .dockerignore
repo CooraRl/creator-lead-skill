@@ -1,0 +1,11 @@
+.creator-lead-data
+.env
+.git
+__pycache__
+*.pyc
+*.sqlite
+*.sqlite3
+*.db
+*.csv
+*.log
+campaign.json
