@@ -28,3 +28,8 @@
 ## 免责声明
 
 本仓库按 MIT 许可提供，按现状给出，不构成法律建议。你需要对自己发布的内容、收集的个人信息和商业承诺负责。
+
+
+## 与可运行引擎的关系
+
+`skills/creator-lead/` 下的落地页、邮件队列和 webhook 必须遵守本文件的全部硬性规则。额外的工程控制（同意记录、退订、脱敏导出、保留期限）见 `skills/creator-lead/references/compliance.md`。开启 SMTP 或 webhook 前，先确认资料页和隐私说明已经实际上线，并且使用 HTTPS。

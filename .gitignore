@@ -26,3 +26,12 @@ secrets/
 local-exports/
 leads-private/
 *.private.json
+
+# 获客引擎运行时数据，永远不要提交
+skills/creator-lead/data/
+skills/creator-lead/.env
+skills/creator-lead/local-exports/
+*.sqlite3
+*.sqlite3-shm
+*.sqlite3-wal
+landing.html

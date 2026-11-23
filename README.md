@@ -31,6 +31,25 @@
 4. 把生成的文案当作草稿：先核对事实，再由你在各平台手动发布或回复。
 5. 第 5 步只处理你主动提供的评论和私信。输出里的回复必须经你修改后，由你本人发出。
 
+
+## 可运行的获客引擎
+
+仓库里现在除了提示词技能，还有一套可在本地运行的线索系统（Python 标准库，无第三方依赖）：落地页与同意勾选、同意记录、去重、意向评分、高意向 webhook 队列、确认信与分阶段培育、失败重试发件箱、一键退订、评论/私信导入评分、来源码归因、脱敏导出、漏斗报表、到期清理，以及 SQLite 和 Docker Compose。
+
+它**不会**自动私信、自动评论或自动发布。邮件和 webhook 默认都不发送，必须由你配置环境变量并显式加上 `--send`。
+
+快速试用（在 `skills/creator-lead/` 下）：
+
+```bash
+python scripts/test_creator_lead.py
+python scripts/creator_lead.py init --config assets/campaign.example.json --data-dir ./data --force
+python scripts/creator_lead.py serve --config assets/campaign.example.json --data-dir ./data
+```
+
+浏览器打开 `http://127.0.0.1:8787`。完整命令、Docker 和环境变量见 [`skills/creator-lead/references/operations.md`](skills/creator-lead/references/operations.md)。审查与修复说明见 [`CHANGELOG.md`](CHANGELOG.md)。
+
+上线前你需要自己准备：真实域名与 HTTPS、SMTP、webhook/CRM 地址，以及已经发布的资料页和隐私说明。不要把示例里的 `example.com` 或本机地址用于对外宣传。
+
 ## 在各工具中使用这个 Skill
 
 `skills/creator-lead/SKILL.md` 使用通用 Agent Skills 格式（YAML frontmatter 含 `name` 与 `description`），兼容 Claude Code、Cursor、Codex、Grok Build 等会读取 `SKILL.md` 的工具。
@@ -70,13 +89,17 @@ cp -R skills/creator-lead ~/.claude/skills/
 
 ```
 creator-lead-skill/
-  skills/creator-lead/SKILL.md   # 便携技能正文
-  prompts/                       # 6 步提示词，可单独复制使用
-  platforms/                     # 抖音、X、公众号的格式与合规要点
-  data/schema.md                 # 选题、内容和线索的 JSON 约定
-  data/sample-content.json       # 【示例】内容草稿
-  data/sample-leads.json         # 【示例】线索分级
-  COMPLIANCE.md                  # 硬性合规规则
+  skills/creator-lead/SKILL.md          # 便携技能正文
+  skills/creator-lead/scripts/          # 可运行的获客引擎与测试
+  skills/creator-lead/assets/           # 示例配置、导入数据、compose
+  skills/creator-lead/references/       # 操作说明与工程合规基线
+  prompts/                              # 6 步提示词，可单独复制使用
+  platforms/                            # 抖音、X、公众号的格式与合规要点
+  data/schema.md                        # 选题、内容和线索的 JSON 约定
+  data/sample-content.json              # 【示例】内容草稿
+  data/sample-leads.json                # 【示例】线索分级
+  COMPLIANCE.md                         # 硬性合规规则
+  CHANGELOG.md                          # 审查与版本说明
 ```
 
 ## 推荐的 GitHub Topics
